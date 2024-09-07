@@ -1,0 +1,13 @@
+//pembuatan table
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) NOT NULL,
+  creation_time DATETIME NOT NULL
+);
+
+//mengubah nama table
+ALTER TABLE users
+CHANGE waktu_tanggal creation_time DATETIME NOT NULL;
+
+//menghapus seluruh data di table
+DELETE FROM users;

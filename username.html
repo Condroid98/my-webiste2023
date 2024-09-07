@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nama kamu?</title>
+  <link rel="stylesheet" href="edit.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    function validateForm() {
+      var username = document.getElementById("username-input").value;
+      // Lakukan validasi sesuai kebutuhan
+      if (!/^[a-zA-Z]+$/.test(username)) {
+        alert("hanya boleh huruf");
+        return false;
+      }
+      return true;
+    }
+
+    function confirmCancel() {
+      if (confirm("Yakin ingin membatalkan?")) {
+        cancelEdit();
+      }
+    }
+
+    function cancelEdit() {
+      window.location.href = "http://localhost";
+    }
+
+    $(document).ready(function() {
+      $('#username-input').on('input', function() {
+        var username = $(this).val();
+        if (username.length > 0) {
+          $.ajax({
+            url: 'check_username.php',
+            type: 'POST',
+            data: { username: username },
+            success: function(response) {
+              if (response === 'duplicate') {
+                $('#username-error').text('Nama ini sudah ada.');
+              } else {
+                $('#username-error').text('');
+              }
+            }
+          });
+        } else {
+          $('#username-error').text('');
+        }
+      });
+    });
+  </script>
+</head>
+<div class="container">
+<body>
+    <h1>Nama Kamu?</h1>
+    <form action="save_data.php" method="POST" onsubmit="return validateForm();">
+      <div class="form-group">
+        <label for="username-input"></label>
+        <input type="text" id="username-input" name="username" placeholder="Masukkan Nama Kamu" autofocus required>
+        <div id="username-error" class="error-message"></div>
+      </div>
+      <div class="button-container">
+        <button class="button" type="submit">Simpan</button>
+        <button type="button" onclick="confirmCancel()">Batal</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

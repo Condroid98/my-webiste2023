@@ -1,0 +1,85 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('gambar_belakang.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+} 
+  
+.container {
+  max-width: 400px;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 6px;
+}
+  
+  h1 {
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 30px;
+  }
+
+  .error-message {
+    color: red;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    color: #777;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(51, 51, 51, 0.253);
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input[type="text"]:focus {
+    border-color: #1f1f27;
+    outline: none;
+  }
+  
+  .button-container {
+    text-align: center;
+  }
+  
+  .button-container button {
+    background-color: #636272;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-container button:hover {
+    background-color: #2b2a31;
+  }
+  
+  .button-container button:last-child {
+    background-color: #86858b;
+    color: #333;
+    margin-left: 10px;
+  }
+  
+  .button-container button:last-child:hover {
+    background-color: #1f1f27;
+  }

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('gambar_belakang.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  text-align: center;
+  padding: 110px;
+  background-color: rgba(156, 156, 156, 0.301);
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: -2px;
+  color: rgb(224, 217, 217);
+  margin-bottom: 20px;
+}
+
+p#date-time {
+  font-size: 24px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  margin: 0;
+  color: rgb(252, 252, 252);
+}
+
+.message {
+  font-family: 'Franklin Gothic Medium';
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
+}
+
+.button {
+  opacity: 0;
+  display: inline-block;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  margin-top: 20px;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+
+.button-cari {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #8f8f8f; 
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-cari:hover {
+  background-color: #d1d1d1; 
+}
+
+.search-form {
+  margin: 100px auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-input {
+  width: 300px;
+  height: 30px;
+  padding: 5px;
+  font-size: 16px;
+  background-color: #4242424d;
+  color: #fff;
+}
+
+.search-icon {
+  color: rgb(155, 155, 155);
+  font-size: 18px;
+}
+
+.google-logo {
+  width: 30px;
+  height: 30px;
+}
